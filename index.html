@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lord Ram - Divine Tribute</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Manrope:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="eyebrow">A Simple Devotional Webpage</p>
+      <h1>Lord Ram</h1>
+      <p class="subtitle">A symbol of courage, compassion, and righteousness.</p>
+      <button id="blessingBtn" class="glow-btn">Receive Blessing</button>
+      <p id="blessingText" class="blessing-text" aria-live="polite"></p>
+    </div>
+  </header>
+
+  <main>
+    <section class="gallery-section">
+      <h2>Animated Photo Gallery</h2>
+      <p class="gallery-note">Auto-sliding cards with subtle floating animation.</p>
+
+      <div class="slider" aria-label="Lord Ram animated gallery">
+        <button class="nav prev" aria-label="Previous image">&#10094;</button>
+
+        <div class="slides-wrap">
+          <div class="slides" id="slides">
+            <article class="slide">
+              <img src="assets/ram1.svg" alt="Lord Ram with bow in a sunrise scene" />
+            </article>
+            <article class="slide">
+              <img src="assets/ram2.svg" alt="Lord Ram temple silhouette under glowing sky" />
+            </article>
+            <article class="slide">
+              <img src="assets/ram3.svg" alt="Lord Ram devotional art with radiant background" />
+            </article>
+          </div>
+        </div>
+
+        <button class="nav next" aria-label="Next image">&#10095;</button>
+      </div>
+
+      <div class="dots" id="dots" aria-label="Slide indicators"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Made with devotion and code.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

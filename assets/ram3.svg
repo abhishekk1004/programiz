@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">Radiant Devotion Artwork</title>
+  <desc id="desc">Stylized devotional art with radiant rays and symbolic bow and arrow.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fff3d1"/>
+      <stop offset="50%" stop-color="#ffc16f"/>
+      <stop offset="100%" stop-color="#cc5a09"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="700" fill="url(#bg)"/>
+
+  <g stroke="#ffecbc" stroke-width="4" opacity="0.5">
+    <line x1="600" y1="350" x2="1160" y2="350"/>
+    <line x1="600" y1="350" x2="40" y2="350"/>
+    <line x1="600" y1="350" x2="600" y2="40"/>
+    <line x1="600" y1="350" x2="600" y2="660"/>
+    <line x1="600" y1="350" x2="1000" y2="100"/>
+    <line x1="600" y1="350" x2="200" y2="100"/>
+    <line x1="600" y1="350" x2="1000" y2="600"/>
+    <line x1="600" y1="350" x2="200" y2="600"/>
+  </g>
+
+  <circle cx="600" cy="350" r="145" fill="#fff2cc" opacity="0.85"/>
+  <circle cx="600" cy="350" r="88" fill="#ffda8e"/>
+
+  <path d="M560 250 Q500 350 560 450" stroke="#6e2b01" stroke-width="18" fill="none" stroke-linecap="round"/>
+  <line x1="560" y1="350" x2="760" y2="350" stroke="#6e2b01" stroke-width="8"/>
+  <polygon points="760,350 730,336 730,364" fill="#6e2b01"/>
+
+  <text x="600" y="660" text-anchor="middle" font-family="Georgia, serif" font-size="44" fill="#fff1d0">Strength, Dharma, Grace</text>
+</svg>

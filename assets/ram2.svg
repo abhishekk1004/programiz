@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">Temple Evening Artwork</title>
+  <desc id="desc">Stylized devotional art with temple forms and warm evening glow.</desc>
+  <defs>
+    <linearGradient id="evening" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffe4af"/>
+      <stop offset="65%" stop-color="#ffb66a"/>
+      <stop offset="100%" stop-color="#7f2f00"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="700" fill="url(#evening)"/>
+  <circle cx="290" cy="170" r="88" fill="#fff1c4" opacity="0.75"/>
+
+  <rect x="120" y="430" width="960" height="220" fill="#4c1900"/>
+  <rect x="450" y="280" width="300" height="320" fill="#5f2500"/>
+  <polygon points="600,120 415,280 785,280" fill="#5f2500"/>
+
+  <rect x="160" y="350" width="120" height="300" fill="#512003"/>
+  <polygon points="220,230 140,350 300,350" fill="#512003"/>
+  <rect x="920" y="350" width="120" height="300" fill="#512003"/>
+  <polygon points="980,230 900,350 1060,350" fill="#512003"/>
+
+  <path d="M600 340 Q520 430 600 520 Q680 430 600 340 Z" fill="#ffd180" opacity="0.9"/>
+  <text x="600" y="665" text-anchor="middle" font-family="Georgia, serif" font-size="42" fill="#ffecc7">Temple of Peace</text>
+</svg>
