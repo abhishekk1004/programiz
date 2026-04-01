@@ -4,6 +4,11 @@ const prevBtn = document.querySelector(".prev");
 const nextBtn = document.querySelector(".next");
 const blessingBtn = document.getElementById("blessingBtn");
 const blessingText = document.getElementById("blessingText");
+const blessingCountEl = document.getElementById("blessingCount");
+const quoteBtn = document.getElementById("quoteBtn");
+const quoteText = document.getElementById("quoteText");
+const yearEl = document.getElementById("year");
+const revealEls = document.querySelectorAll(".reveal");
 
 const totalSlides = slidesEl.children.length;
 let currentIndex = 0;
@@ -59,10 +64,43 @@ const blessings = [
   "May every challenge turn into strength."
 ];
 
+const reflections = [
+  "Dharma protects those who protect dharma.",
+  "Humility gives true strength its direction.",
+  "A calm mind sees the right path clearly.",
+  "Character is built by choices made in silence."
+];
+
+let blessingCount = Number(localStorage.getItem("blessingCount") || 0);
+blessingCountEl.textContent = String(blessingCount);
+
 blessingBtn.addEventListener("click", () => {
   const randomBlessing = blessings[Math.floor(Math.random() * blessings.length)];
   blessingText.textContent = randomBlessing;
+  blessingCount += 1;
+  blessingCountEl.textContent = String(blessingCount);
+  localStorage.setItem("blessingCount", String(blessingCount));
 });
+
+quoteBtn.addEventListener("click", () => {
+  const randomReflection = reflections[Math.floor(Math.random() * reflections.length)];
+  quoteText.textContent = randomReflection;
+});
+
+yearEl.textContent = new Date().getFullYear();
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      }
+    });
+  },
+  { threshold: 0.15 }
+);
+
+revealEls.forEach((el) => observer.observe(el));
 
 renderDots();
 goToSlide(0);
