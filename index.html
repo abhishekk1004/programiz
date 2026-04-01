@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,17 +13,64 @@
 <body>
   <header class="hero">
     <div class="hero-overlay"></div>
+    <nav class="top-nav" aria-label="Main navigation">
+      <a href="#about">About</a>
+      <a href="#values">Values</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#teachings">Teachings</a>
+    </nav>
     <div class="hero-content">
       <p class="eyebrow">A Simple Devotional Webpage</p>
       <h1>Lord Ram</h1>
       <p class="subtitle">A symbol of courage, compassion, and righteousness.</p>
       <button id="blessingBtn" class="glow-btn">Receive Blessing</button>
       <p id="blessingText" class="blessing-text" aria-live="polite"></p>
+      <p class="blessing-count">Blessings received: <span id="blessingCount">0</span></p>
     </div>
   </header>
 
   <main>
-    <section class="gallery-section">
+    <section id="about" class="about-section reveal">
+      <h2>Why Lord Ram Inspires Millions</h2>
+      <p>
+        Revered as Maryada Purushottam, Lord Ram represents discipline, truth, and compassion. His life in the
+        Ramayana teaches that strength is most powerful when guided by humility and dharma.
+      </p>
+      <div class="stat-grid">
+        <article class="stat-card">
+          <h3>Compassion</h3>
+          <p>Kindness for everyone, including the weak and unheard.</p>
+        </article>
+        <article class="stat-card">
+          <h3>Integrity</h3>
+          <p>Standing by values, even in difficult circumstances.</p>
+        </article>
+        <article class="stat-card">
+          <h3>Courage</h3>
+          <p>Facing duty with calmness and inner conviction.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="values" class="values-section reveal">
+      <h2>Core Teachings</h2>
+      <div class="values-list">
+        <article>
+          <h3>Live with Dharma</h3>
+          <p>Choose what is right over what is easy.</p>
+        </article>
+        <article>
+          <h3>Honor Relationships</h3>
+          <p>Respect, trust, and loyalty strengthen every bond.</p>
+        </article>
+        <article>
+          <h3>Lead by Example</h3>
+          <p>Character is the foundation of true leadership.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="gallery" class="gallery-section reveal">
       <h2>Animated Photo Gallery</h2>
       <p class="gallery-note">Auto-sliding cards with subtle floating animation.</p>
 
@@ -48,10 +96,18 @@
 
       <div class="dots" id="dots" aria-label="Slide indicators"></div>
     </section>
+
+    <section id="teachings" class="quote-section reveal">
+      <h2>Daily Reflection</h2>
+      <blockquote id="quoteText">
+        Dharma protects those who protect dharma.
+      </blockquote>
+      <button id="quoteBtn" class="glow-btn" type="button">Show Another Reflection</button>
+    </section>
   </main>
 
   <footer>
-    <p>Made with devotion and code.</p>
+    <p>Made with devotion and code. <span id="year"></span></p>
   </footer>
 
   <script src="script.js"></script>
