@@ -32,6 +32,30 @@ body {
     url("assets/ram1.svg") center / cover no-repeat;
 }
 
+.top-nav {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 2;
+  display: flex;
+  gap: 0.7rem;
+}
+
+.top-nav a {
+  text-decoration: none;
+  color: #5f2300;
+  background: rgba(255, 249, 236, 0.88);
+  border: 1px solid rgba(146, 67, 11, 0.18);
+  padding: 0.4rem 0.72rem;
+  border-radius: 999px;
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.top-nav a:hover {
+  background: #fff7e5;
+}
+
 .hero-overlay {
   position: absolute;
   inset: 0;
@@ -93,16 +117,79 @@ h1 {
   font-weight: 600;
 }
 
+.blessing-count {
+  margin-top: 0.25rem;
+  font-size: 0.94rem;
+  font-weight: 700;
+  color: #6f2d0a;
+}
+
 main {
   width: min(1100px, 92%);
   margin: 2.3rem auto;
+  display: grid;
+  gap: 1.15rem;
 }
 
-.gallery-section {
+.about-section,
+.values-section,
+.gallery-section,
+.quote-section {
   background: linear-gradient(180deg, rgba(255, 250, 241, 0.95), rgba(255, 238, 202, 0.95));
   border-radius: 24px;
   padding: 1.6rem 1rem 1.8rem;
   box-shadow: var(--shadow);
+}
+
+.about-section h2,
+.values-section h2,
+.quote-section h2 {
+  text-align: center;
+  font-size: clamp(1.4rem, 4vw, 2.2rem);
+  color: #6f2500;
+}
+
+.about-section p {
+  text-align: center;
+  max-width: 65ch;
+  margin: 0.7rem auto 1.2rem;
+}
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+}
+
+.stat-card {
+  background: linear-gradient(180deg, #fff8eb, #ffefd0);
+  border: 1px solid #efc896;
+  border-radius: 16px;
+  padding: 0.95rem;
+}
+
+.stat-card h3,
+.values-list h3 {
+  margin: 0 0 0.35rem;
+  font-family: "Cinzel", serif;
+  color: #7f2f00;
+}
+
+.values-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+}
+
+.values-list article {
+  background: rgba(255, 246, 228, 0.8);
+  border-left: 4px solid #d86a1d;
+  border-radius: 12px;
+  padding: 0.85rem;
+}
+
+.gallery-section {
+  scroll-margin-top: 1rem;
 }
 
 .gallery-section h2 {
@@ -183,6 +270,29 @@ main {
   transform: scale(1.16);
 }
 
+.quote-section {
+  text-align: center;
+}
+
+.quote-section blockquote {
+  max-width: 50ch;
+  margin: 0.85rem auto 1rem;
+  font-size: clamp(1.05rem, 2vw, 1.22rem);
+  color: #5c2302;
+  font-weight: 600;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 footer {
   text-align: center;
   padding: 1.6rem 0 2.2rem;
@@ -212,6 +322,17 @@ footer {
 }
 
 @media (max-width: 700px) {
+  .top-nav {
+    position: static;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0.8rem 0.8rem 0;
+  }
+
+  .top-nav a {
+    font-size: 0.8rem;
+  }
+
   .slider {
     grid-template-columns: 1fr;
   }
@@ -222,5 +343,10 @@ footer {
 
   main {
     margin-top: 1.3rem;
+  }
+
+  .stat-grid,
+  .values-list {
+    grid-template-columns: 1fr;
   }
 }
