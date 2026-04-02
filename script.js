@@ -9,6 +9,10 @@ const quoteBtn = document.getElementById("quoteBtn");
 const quoteText = document.getElementById("quoteText");
 const yearEl = document.getElementById("year");
 const revealEls = document.querySelectorAll(".reveal");
+const chatToggle = document.getElementById("chatToggle");
+const chatPanel = document.getElementById("chatPanel");
+const chatMessage = document.getElementById("chatMessage");
+const chatOptions = document.querySelectorAll(".chat-option");
 
 const totalSlides = slidesEl.children.length;
 let currentIndex = 0;
@@ -88,6 +92,30 @@ quoteBtn.addEventListener("click", () => {
 });
 
 yearEl.textContent = new Date().getFullYear();
+
+chatToggle.addEventListener("click", () => {
+  const isExpanded = chatToggle.getAttribute("aria-expanded") === "true";
+  chatToggle.setAttribute("aria-expanded", String(!isExpanded));
+  chatPanel.hidden = isExpanded;
+});
+
+chatOptions.forEach((option) => {
+  option.addEventListener("click", () => {
+    const targetId = option.dataset.target;
+    const responses = {
+      about: "Lord Ram stands for courage, compassion, and dharma. His story encourages steady action guided by principle.",
+      values: "The core values here are compassion, integrity, and courage. They shape every section of the page.",
+      gallery: "The gallery is below. You can use the arrows or let the cards auto-slide.",
+      teachings: "The reflection section collects short lines inspired by dharma and calm leadership."
+    };
+
+    chatMessage.textContent = responses[targetId] || "Choose another topic from the options below.";
+
+    if (targetId) {
+      document.getElementById(targetId)?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  });
+});
 
 const observer = new IntersectionObserver(
   (entries) => {

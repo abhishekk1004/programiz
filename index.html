@@ -11,13 +11,19 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="hero">
+  <header class="hero" id="home">
     <div class="hero-overlay"></div>
     <nav class="top-nav" aria-label="Main navigation">
-      <a href="#about">About</a>
-      <a href="#values">Values</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#teachings">Teachings</a>
+      <a class="brand-link" href="#home" aria-label="Go to home page">
+        <span class="brand-mark" aria-hidden="true">ॐ</span>
+        <span class="brand-text">Ram Darshan</span>
+      </a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#values">Values</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#teachings">Teachings</a>
+      </div>
     </nav>
     <div class="hero-content">
       <p class="eyebrow">A Simple Devotional Webpage</p>
@@ -105,6 +111,31 @@
       <button id="quoteBtn" class="glow-btn" type="button">Show Another Reflection</button>
     </section>
   </main>
+
+  <section class="chat-widget" aria-label="Chat options panel">
+    <button id="chatToggle" class="chat-toggle" type="button" aria-expanded="false" aria-controls="chatPanel">
+      Chat Options
+    </button>
+
+    <div id="chatPanel" class="chat-panel" hidden>
+      <div class="chat-header">
+        <div>
+          <p class="chat-kicker">Quick guide</p>
+          <h2>Choose a response</h2>
+        </div>
+        <p class="chat-status">Online</p>
+      </div>
+
+      <p id="chatMessage" class="chat-message">Pick a topic to explore the page.</p>
+
+      <div class="chat-options">
+        <button type="button" class="chat-option" data-target="about">Tell me about Lord Ram</button>
+        <button type="button" class="chat-option" data-target="values">Show core values</button>
+        <button type="button" class="chat-option" data-target="gallery">Open the gallery</button>
+        <button type="button" class="chat-option" data-target="teachings">Read a reflection</button>
+      </div>
+    </div>
+  </section>
 
   <footer>
     <p>Made with devotion and code. <span id="year"></span></p>
